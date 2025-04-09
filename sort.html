@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Sorting and Mapping</h1>
+    <button onclick="asc()">Ascending Order</button>
+    <button onclick="des()">Descending Order</button>
+    <p id="result"></p>
+    <p id="map"></p>
+    <button onclick="myfunction()">Evaluate</button>
+    <p id="eval"></p>
+    <script>
+        var points =[100, 60, 90, 80, 70 ]
+        document.getElementById("result").innerHTML = points;
+    function asc() {
+    points.sort(function(a,b){return a-b})
+    document.getElementById("result").innerHTML=points;
+    }
+    function des() {
+    points.sort(function(a,b){return b-a})
+    document.getElementById("result").innerHTML=points;
+}
+function mapping(num) {
+    return num * 10
+}
+var newarray= points.map(mapping)
+document.getElementById("map").innerHTML=newarray;
+
+function myfunction(){
+    var x = 50;
+    var y = 40;
+    var a =eval("x+y") + "<br>";
+    var b =eval("x-y") + "<br>";
+    var c = eval("2*2") + "<br>";
+    var res=a+b+c;
+    document.getElementById("eval").innerHTML=res;
+}
+
+   </script>
+</body>
+</html>
